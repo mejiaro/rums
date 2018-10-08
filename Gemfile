@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -21,6 +22,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'factory_bot'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do

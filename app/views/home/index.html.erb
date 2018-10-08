@@ -1,0 +1,12 @@
+<h1>Calendario</h1>
+<div>
+  <%= month_calendar events: @reservations do |date, reservations| %>
+    <%= date %>
+    <% reservations.each do |reservation| %>
+      <div>
+        <span class="badge badge-info">Reservado</span>
+      </div>
+    <% end %>
+
+  <% end %>
+</div>

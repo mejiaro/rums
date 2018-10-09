@@ -10,3 +10,6 @@
 
   <% end %>
 </div>
+<div>
+  <%= select_tag('room_id', options_for_select(Room.all.collect{ |u| [u.name, u.id] }), include_blank: true, onchange: "location.href='/?room_id='+$(this).val();") %>
+</div>

@@ -19,7 +19,7 @@
         <%= date %>
         <% reservations.each do |reservation| %>
           <div>
-            <span class="badge badge-info"><i class="fa fa-building-o" aria-hidden="true"></i><%= reservation.room.name  %></span>
+            <span class="badge badge-info"><i class="fa fa-building" aria-hidden="true"></i> <%= reservation.room.name  %></span>
           </div>
         <% end %>
       <% end %>

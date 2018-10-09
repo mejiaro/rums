@@ -16,10 +16,14 @@
   <div class="row">
     <div class="col-sm-9">
       <%= month_calendar events: @reservations do |date, reservations| %>
-        <%= date %>
+        <%= date.strftime('%d/%m') %>
         <% reservations.each do |reservation| %>
           <div>
             <span class="badge badge-info"><i class="fa fa-building" aria-hidden="true"></i> <%= reservation.room.name  %></span>
+          </div>
+           <br>
+          <div>
+            <span class="badge badge-info"><i class="fas fa-users" aria-hidden="true"></i> <%= reservation.room.total_reservations(date,date)  %></span>
           </div>
         <% end %>
       <% end %>
